@@ -2,7 +2,7 @@
 
 ## CTWG-TB dbt Project
 
-This project uses dbt to map a synthetic clinical trial dataset to the OMOP Common Data Model.
+This project uses dbt to map an SDTM clinical trial dataset to the OMOP Common Data Model.
 
 ### Project Structure
 

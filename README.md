@@ -32,7 +32,7 @@ This section describes setup of a dbt project for converting the TB-1015 SDTM da
  ```bash
  python3 -m venv dbt-env
  ```
- - If you are using VS Code, create a .env file in  the root of your repo workspace (`touch .env`) and add a PYTHONPATH entry for your virtual env (for example, if you cloned your repo in your computer's home directory, the entry will read as: `PYTHONPATH="~/dbt-synthea/dbt-env/bin/python"`)
+ - If you are using VS Code, create a .env file in  the root of your repo workspace (`touch .env`) and add a PYTHONPATH entry for your virtual env (for example, if you cloned your repo in your computer's home directory, the entry will read as: `PYTHONPATH="~/ClinicalTrialsWG-TB/dbt-env/bin/python"`)
  - Now, in VS Code, once you set this virtualenv as your preferred interpreter for the project, the vscode config in the repo will automatically source this env each time you open a new terminal in the project.  Otherwise, each time you open a new terminal to use dbt for this project, run:
 ```bash
 source dbt-env/bin/activate         # activate the environment for Mac and Linux OR
@@ -40,7 +40,7 @@ dbt-env\Scripts\activate            # activate the environment for Windows
 ```
 3. Set up your [profiles.yml file](https://docs.getdbt.com/docs/core/connect-data-platform/profiles.yml).  You can either:
    - Create a file in the `~/.dbt/` directory named `profiles.yml` (if you've already got this directory and file, you can skip this step and add profile block(s) for this project to that file)
-   - Create a `profiles.yml` file in the root of the `dbt-synthea` repo folder
+   - Create a `profiles.yml` file in the root of the `ClinicalTrialsWG-TB` repo folder
    - Create the file wherever you wish, following the guidance [here](https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles#advanced-customizing-a-profile-directory)
 
 ### DuckDB Setup

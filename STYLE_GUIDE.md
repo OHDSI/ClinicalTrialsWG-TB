@@ -1,4 +1,4 @@
-# dbt-synthea Style Guide
+# CTWG dbt Style Guide
 
 ## Overview
 

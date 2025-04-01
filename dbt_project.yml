@@ -3,7 +3,6 @@ version: "0.1.0"
 config-version: 2
 
 profile: "ctwg_tb"
-#profile: "synthea_omop_etl"
 
 asset-paths: ["assets"]
 docs-paths: ["docs"]
