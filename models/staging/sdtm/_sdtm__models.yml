@@ -1,0 +1,200 @@
+models:
+  - name: stg_sdtm__dm
+    description: "DM"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique subject identifier"
+      - name: subjid
+        description: "Subject identifier for the study"
+      - name: rfstdtc
+        description: "Subject reference start date/time"
+      - name: rfxstdtc
+        description: "Date/time of first study treatment"
+      - name: dthfl
+        description: "Death flag"
+      - name: siteid
+        description: "Study site identifier"
+      - name: age
+        description: "Age of the subject"
+      - name: ageu
+        description: "Age units"
+      - name: sex
+        description: "Sex of the subject"
+      - name: race
+        description: "Race of the subject"
+      - name: ethnic
+        description: "Ethnicity of the subject"
+      - name: armcd
+        description: "Planned arm code"
+      - name: arm
+        description: "Description of planned arm"
+      - name: actarmcd
+        description: "Actual arm code"
+      - name: actarm
+        description: "Description of actual arm"
+      - name: country
+        description: "Country of the investigational site"
+      - name: dmdy
+        description: "Study day of collection"
+      - name: hivanlys
+        description: "HIV analysis population flag"
+      - name: itt
+        description: "Intent-to-treat population flag"
+      - name: ittdisp
+        description: "Disposition for intent-to-treat population"
+      - name: mitthiv
+        description: "Modified intent-to-treat HIV population flag"
+      - name: mittpeds
+        description: "Modified intent-to-treat pediatric population flag"
+      - name: mittprim
+        description: "Modified intent-to-treat primary population flag"
+      - name: pedstrcs
+        description: "Pediatric stratum code"
+      - name: ppdisp
+        description: "Per-protocol disposition"
+      - name: pprot
+        description: "Per-protocol population flag"
+      - name: prianlys
+        description: "Primary analysis population flag"
+      - name: race1
+        description: "First race category"
+      - name: race2
+        description: "Second race category"
+      - name: racec
+        description: "Race category"
+      - name: racesp
+        description: "Race specification"
+      - name: region
+        description: "Geographic region"
+      - name: rfendy
+        description: "Reference end date"
+      - name: safety
+        description: "Safety population flag"
+  - name: stg_sdtm__ds
+    description: "DS"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique subject identifier"
+      - name: dsseq
+        description: "Sequence number"
+      - name: dsspid
+        description: "Sponsor-defined identifier"
+      - name: dsterm
+        description: "Disposition term"
+      - name: dsmodify
+        description: "Modification of disposition term"
+      - name: dsdecod
+        description: "Disposition decoded"
+      - name: dscat
+        description: "Category for disposition event"
+      - name: dsscat
+        description: "Subcategory for disposition event"
+      - name: visitnum
+        description: "Visit number"
+      - name: visit
+        description: "Visit name"
+      - name: epoch
+        description: "Epoch associated with the disposition event"
+      - name: dsstdy
+        description: "Study day of disposition"
+      - name: dsdur
+        description: "Duration of disposition event"
+      - name: dstpt
+        description: "Planned time point name"
+      - name: ststudmo
+        description: "Study month of disposition"
+      - name: ststudyr
+        description: "Study year of disposition"
+      - name: aenum
+        description: "Adverse event number"
+      - name: deathrel
+        description: "Relationship to death"
+      - name: knwncaus
+        description: "Known cause of death"
+      - name: livedy
+        description: "Days lived after disposition"
+      - name: restrtdy
+        description: "Days from randomization to disposition"
+      - name: secncaus
+        description: "Secondary cause of death"
+      - name: tbwas
+        description: "Tuberculosis was present"
+      - name: thircaus
+        description: "Third cause of death"
+      - name: totcldur
+        description: "Total clinical duration"
+      - name: totdscpt
+        description: "Total disposition description"
+      - name: totidose
+        description: "Total dose"
+      - name: trtgap
+        description: "Treatment gap"
+  - name: stg_sdtm__sv
+    description: "SV"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique subject identifier"
+      - name: svseq
+        description: "Sequence number"
+      - name: svspid
+        description: "Sponsor-defined identifier"
+      - name: visitnum
+        description: "Visit number"
+      - name: visit
+        description: "Visit name"
+      - name: epoch
+        description: "Epoch associated with the visit"
+      - name: svstdy
+        description: "Study day of visit start"
+      - name: svendy
+        description: "Study day of visit end"
+      - name: dtmseen
+        description: "Date/time seen"
+      - name: encourag
+        description: "Encouragement"
+      - name: evaltype
+        description: "Evaluation type"
+      - name: moveaway
+        description: "Moved away"
+      - name: newaddr
+        description: "New address"
+      - name: nolocate
+        description: "Not located"
+      - name: patdied
+        description: "Patient died"
+      - name: patseen
+        description: "Patient seen"
+      - name: relseen
+        description: "Relative seen"
+      - name: timely
+        description: "Timely"
+      - name: tsupseen
+        description: "Time since last seen"
+      - name: svtype
+        description: "Visit type"
+      - name: svupdes1
+        description: "Visit update description 1"
+      - name: svupdes
+        description: "Visit update description"
+      - name: visited
+        description: "Visited"
+      - name: whynosho
+        description: "Reason for no show"

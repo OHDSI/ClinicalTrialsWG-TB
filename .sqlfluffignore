@@ -1,0 +1,9 @@
+macros/
+target/
+dbt_packages/
+dbt-env/
+logs/
+seeds/
+scripts/
+v1/
+holding_area/
