@@ -1,0 +1,50 @@
+name: "ctwg_tb"
+version: "0.1.0"
+config-version: 2
+
+profile: "ctwg_tb"
+
+asset-paths: ["assets"]
+docs-paths: ["docs"]
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets: # directories to be removed by `dbt clean`
+  - "target"
+
+vars:
+  seed_source: false
+
+models:
+  ctwg_tb:
+    intermediate:
+      +materialized: table
+      +docs:
+        node_color: '#FBC511'
+    omop:
+      +materialized: table
+      +docs:
+        node_color: '#EB6622'
+    staging:
+      sdtm:
+        +materialized: view
+        +docs:
+          node_color: '#336B91'
+      vocabulary:
+        +materialized: view
+        +docs:
+          node_color: '#336B91'
+
+seeds:
+  +quote_columns: true
+  ctwg_tb:
+    vocabulary:
+      +enabled: false
+      +schema: vocab_seeds
+      +docs:
+        node_color: '#69AED5'
+

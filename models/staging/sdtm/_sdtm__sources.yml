@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: sdtm
+    schema: "{% if var('seed_source') %}{{ target.schema ~ '_sdtm_seeds' }}{% else %}{{ target.schema ~ '_sdtm' }}{% endif %}"
+    tables:
+      - name: dm
+      - name: ds
+      - name: sv
+      

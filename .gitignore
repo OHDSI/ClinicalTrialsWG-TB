@@ -107,3 +107,20 @@ src/__pycache__/
 .ipynb_checkpoints
 .ipython
 .jupyter
+
+
+# ----- dbt -----
+dbt-env/
+.env
+.DS_Store
+*.log
+target/
+dbt_packages/
+logs/
+data/
+.Rdata
+.Rhistory
+*.duckdb
+.dbt/
+profiles.yml
+mcp.json
