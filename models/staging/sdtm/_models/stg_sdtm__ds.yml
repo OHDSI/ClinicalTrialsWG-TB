@@ -1,0 +1,66 @@
+models:
+  - name: stg_sdtm__ds
+    description: "DS"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique subject identifier"
+      - name: dsseq
+        description: "Sequence number"
+      - name: dsspid
+        description: "Sponsor-defined identifier"
+      - name: dsterm
+        description: "Disposition term"
+      - name: dsmodify
+        description: "Modification of disposition term"
+      - name: dsdecod
+        description: "Disposition decoded"
+      - name: dscat
+        description: "Category for disposition event"
+      - name: dsscat
+        description: "Subcategory for disposition event"
+      - name: visitnum
+        description: "Visit number"
+      - name: visit
+        description: "Visit name"
+      - name: epoch
+        description: "Epoch associated with the disposition event"
+      - name: dsstdy
+        description: "Study day of disposition"
+      - name: dsdur
+        description: "Duration of disposition event"
+      - name: dstpt
+        description: "Planned time point name"
+      - name: ststudmo
+        description: "Study month of disposition"
+      - name: ststudyr
+        description: "Study year of disposition"
+      - name: aenum
+        description: "Adverse event number"
+      - name: deathrel
+        description: "Relationship to death"
+      - name: knwncaus
+        description: "Known cause of death"
+      - name: livedy
+        description: "Days lived after disposition"
+      - name: restrtdy
+        description: "Days from randomization to disposition"
+      - name: secncaus
+        description: "Secondary cause of death"
+      - name: tbwas
+        description: "Tuberculosis was present"
+      - name: thircaus
+        description: "Third cause of death"
+      - name: totcldur
+        description: "Total clinical duration"
+      - name: totdscpt
+        description: "Total disposition description"
+      - name: totidose
+        description: "Total dose"
+      - name: trtgap
+        description: "Treatment gap"	

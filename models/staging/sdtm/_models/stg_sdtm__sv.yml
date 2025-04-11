@@ -1,0 +1,58 @@
+models:
+  - name: stg_sdtm__sv
+    description: "SV"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique subject identifier"
+      - name: svseq
+        description: "Sequence number"
+      - name: svspid
+        description: "Sponsor-defined identifier"
+      - name: visitnum
+        description: "Visit number"
+      - name: visit
+        description: "Visit name"
+      - name: epoch
+        description: "Epoch associated with the visit"
+      - name: svstdy
+        description: "Study day of visit start"
+      - name: svendy
+        description: "Study day of visit end"
+      - name: dtmseen
+        description: "Date/time seen"
+      - name: encourag
+        description: "Encouragement"
+      - name: evaltype
+        description: "Evaluation type"
+      - name: moveaway
+        description: "Moved away"
+      - name: newaddr
+        description: "New address"
+      - name: nolocate
+        description: "Not located"
+      - name: patdied
+        description: "Patient died"
+      - name: patseen
+        description: "Patient seen"
+      - name: relseen
+        description: "Relative seen"
+      - name: timely
+        description: "Timely"
+      - name: tsupseen
+        description: "Time since last seen"
+      - name: svtype
+        description: "Visit type"
+      - name: svupdes1
+        description: "Visit update description 1"
+      - name: svupdes
+        description: "Visit update description"
+      - name: visited
+        description: "Visited"
+      - name: whynosho
+        description: "Reason for no show"
