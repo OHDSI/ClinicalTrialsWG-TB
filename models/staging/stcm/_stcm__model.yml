@@ -1,0 +1,27 @@
+models:
+  - name: stg_sctm__source_to_concept_map
+    description: "Source to concept map"
+    columns:
+      - name: source_code
+        description: "The raw source code or text value"
+      - name: source_concept_id
+        description: "The OMOP concept ID corresponding to the source code, if applicable"
+      - name: source_vocabulary_id
+        description: "An ID for the vocabulary that contains the source code"
+      - name: source_code_description
+        description: "The source code description"
+      - name: target_concept_id
+        description: "The target standard concept ID"
+      - name: target_vocabulary_id
+        description: "The target vocabulary ID" 
+      - name: valid_start_date
+        description: "The start date of the target concept's validity"
+      - name: valid_end_date
+        description: "The end date of the target concept's validity"
+  - name: stg_sctm__drug_route
+    description: Concept mapping for SDTM drug routes
+    columns:
+      - name: route
+        description: "The route text value"
+      - name: concept_id
+        description: "The OMOP concept ID corresponding to the route"
