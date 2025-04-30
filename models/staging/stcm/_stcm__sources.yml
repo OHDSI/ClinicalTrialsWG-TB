@@ -1,0 +1,6 @@
+sources:
+  - name: sctm
+    schema: "{{ target.schema ~ '_vocab_seeds' }}"
+    tables:
+      - name: source_to_concept_map
+      - name: drug_route

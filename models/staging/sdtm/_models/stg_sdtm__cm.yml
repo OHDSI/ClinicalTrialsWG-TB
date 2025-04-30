@@ -1,0 +1,158 @@
+models:
+  - name: stg_sdtm__cm
+    description: "CM"
+    columns:
+    - name: id
+      description: "Unique identifier for the record"
+    - name: studyid
+      description: "Study Identifier"
+    - name: domain
+      description: "Domain Abbreviation"
+    - name: usubjid
+      description: "Unique Subject Identifier"
+    - name: cmseq
+      description: "Sequence Number"
+    - name: cmgrpid
+      description: "Group ID"
+    - name: cmspid
+      description: "Sponsor-Defined Identifier"
+    - name: cmlnkid
+      description: "Link ID"
+    - name: cmtrt
+      description: "Reported Name of Drug, Med, or Therapy"
+    - name: cmmodify
+      description: "Modified Reported Name"
+    - name: cmdecod
+      description: "Standardized Medication Name"
+    - name: cmcat
+      description: "Category for Medication"
+    - name: cmscat
+      description: "Subcategory for Medication"
+    - name: cmpresp
+      description: "Prophylactic Response"
+    - name: cmoccur
+      description: "Occurrence Flag"
+    - name: cmstat
+      description: "Completion Status"
+    - name: cmreasnd
+      description: "Reason Medication Not Administered"
+    - name: cmindc
+      description: "Indication"
+    - name: cmclas
+      description: "Medication Class"
+    - name: cmdose
+      description: "Dose Amount"
+    - name: cmdosu
+      description: "Dose Units"
+    - name: cmdosfrm
+      description: "Dose Form"
+    - name: cmdosfrq
+      description: "Dosing Frequency per Interval"
+    - name: cmdostot
+      description: "Total Daily Dose"
+    - name: cmdosrgm
+      description: "Dosing Regimen"
+    - name: cmroute
+      description: "Route of Administration"
+    - name: cmpstrg
+      description: "Pharmaceutical Strength"
+    - name: cmpstrgu
+      description: "Pharmaceutical Strength Units"
+    - name: cmadj
+      description: "Adjustment Reason"
+    - name: visitnum
+      description: "Visit Number"
+    - name: visit
+      description: "Visit Name"
+    - name: epoch
+      description: "Epoch"
+    - name: cmdy
+      description: "Study Day of Medication"
+    - name: cmstdy
+      description: "Start Study Day"
+    - name: cmendy
+      description: "End Study Day"
+    - name: cmdur
+      description: "Duration"
+    - name: cmstrf
+      description: "Start Relative to Reference Period"
+    - name: cmenrf
+      description: "End Relative to Reference Period"
+    - name: cmevintx
+      description: "Event Interval Text"
+    - name: cmstrtpt
+      description: "Start Relative to Time Point"
+    - name: cmsttpt
+      description: "Start Time Point"
+    - name: cmenrtpt
+      description: "End Relative to Time Point"
+    - name: cmentpt
+      description: "End Time Point"
+    - name: ststudmo
+      description: "Start Study Month"
+    - name: enstudmo
+      description: "End Study Month"
+    - name: ststudyr
+      description: "Start Study Year"
+    - name: enstudyr
+      description: "End Study Year"
+    - name: cmact1
+      description: "Action Taken with Medication 1"
+    - name: cmact2
+      description: "Action Taken with Medication 2"
+    - name: cmact3
+      description: "Action Taken with Medication 3"
+    - name: cmact4
+      description: "Action Taken with Medication 4"
+    - name: cmact5
+      description: "Action Taken with Medication 5"
+    - name: cmact6
+      description: "Action Taken with Medication 6"
+    - name: cmact7
+      description: "Action Taken with Medication 7"
+    - name: cmact8
+      description: "Action Taken with Medication 8"
+    - name: aeacn
+      description: "Action Taken with Medication Due to Adverse Event"
+    - name: aerel
+      description: "Relationship to Adverse Event"
+    - name: cmarvn
+      description: "Reviewer Notes"
+    - name: cmarvs
+      description: "Reviewer Status"
+    - name: cmarvy
+      description: "Reviewer Year"
+    - name: atccd10
+      description: "ATC Code Level 10"
+    - name: atccd1
+      description: "ATC Code Level 1"
+    - name: atccd2
+      description: "ATC Code Level 2"
+    - name: atccd3
+      description: "ATC Code Level 3"
+    - name: atccd4
+      description: "ATC Code Level 4"
+    - name: atccd5
+      description: "ATC Code Level 5"
+    - name: atccd6
+      description: "ATC Code Level 6"
+    - name: atccd7
+      description: "ATC Code Level 7"
+    - name: atccd8
+      description: "ATC Code Level 8"
+    - name: atccd9
+      description: "ATC Code Level 9"
+    - name: atctext
+      description: "ATC Text Description"
+    - name: basename
+      description: "Base Name of Medication"
+    - name: cmdostxt
+      description: "Text Description of Dose"
+    - name: cmdurunk
+      description: "Unknown Duration Flag"
+    - name: saltname
+      description: "Salt Name of Medication"
+    - name: whocode
+      description: "WHO Drug Code"
+    - name: whoname
+      description: "WHO Drug Name"

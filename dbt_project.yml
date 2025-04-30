@@ -38,13 +38,21 @@ models:
         +materialized: view
         +docs:
           node_color: '#336B91'
+      sctm:
+        +materialized: view
+        +docs:
+          node_color: '#336B91'
 
 seeds:
-  +quote_columns: true
   ctwg_tb:
+    +quote_columns: true
     vocabulary:
       +enabled: false
       +schema: vocab_seeds
       +docs:
         node_color: '#69AED5'
-
+    stcm:
+      +enabled: true
+      +schema: vocab_seeds
+      +docs:
+        node_color: '#69AED5'

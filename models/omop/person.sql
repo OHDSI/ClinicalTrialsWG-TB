@@ -2,19 +2,19 @@ SELECT
     person_id
     , gender_concept_id
     , year_of_birth
-    , month_of_birth
-    , day_of_birth
-    , birth_datetime
+    , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS month_of_birth
+    , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS day_of_birth
+    , {{ dbt.cast("NULL", api.Column.translate_type("datetime")) }} AS birth_datetime
     , race_concept_id
     , ethnicity_concept_id
-    {# , loc.location_id                     AS location_id #}
-    , provider_id
-    {# , cs.care_site_id                     AS care_site_id #}
+    , location_id
+    , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS provider_id
+    , care_site_id
     , person_source_value
     , gender_source_value
-    , gender_source_concept_id
+    , 0 AS gender_source_concept_id
     , race_source_value
-    , race_source_concept_id
+    , 0 AS race_source_concept_id
     , ethnicity_source_value
-    , ethnicity_source_concept_id
+    , 0 AS ethnicity_source_concept_id
 FROM {{ ref('int__person') }}

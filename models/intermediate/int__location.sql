@@ -5,12 +5,6 @@ WITH countries AS (
 
 SELECT
     ROW_NUMBER() OVER (ORDER BY country) AS location_id
-    , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS address_1
-    , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS address_2
-    , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS city
-    , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS state
-    , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS zip
-    , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS county
     , country AS location_source_value
     , CASE
         WHEN country = 'ZAF' THEN 4073743

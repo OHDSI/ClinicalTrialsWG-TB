@@ -6,9 +6,6 @@ SELECT
         ELSE 0
     END AS gender_concept_id
     , 2014 - {{ dbt.cast("dm.age", api.Column.translate_type("integer")) }} AS year_of_birth
-    , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS month_of_birth
-    , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS day_of_birth
-    , {{ dbt.cast("NULL", api.Column.translate_type("datetime")) }} AS birth_datetime
     , CASE
         WHEN dm.race = 'BLACK OR AFRICAN AMERICAN' THEN 8516
         WHEN dm.race = 'WHITE' THEN 8527
@@ -20,15 +17,11 @@ SELECT
         ELSE 0
     END AS ethnicity_concept_id
     , loc.location_id
-    , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS provider_id
     , cs.care_site_id
     , dm.usubjid AS person_source_value
     , dm.sex AS gender_source_value
-    , 0 AS gender_source_concept_id
     , dm.race AS race_source_value
-    , 0 AS race_source_concept_id
     , dm.ethnic AS ethnicity_source_value
-    , 0 AS ethnicity_source_concept_id
 FROM {{ ref('stg_sdtm__dm') }} AS dm
 LEFT JOIN {{ ref('int__location') }} AS loc
     ON dm.country = loc.location_source_value
