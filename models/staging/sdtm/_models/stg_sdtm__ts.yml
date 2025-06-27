@@ -1,0 +1,38 @@
+models:
+  - name: stg_sdtm__ts
+    description: "TS"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: tsseq
+        description: "Sequence number"
+      - name: tsgpid
+        description: "Group identifier"
+      - name: tsparmcd
+        description: "Parameter code"
+      - name: tsparm
+        description: "Parameter name"
+      - name: tsvalnf
+        description: "Numeric value, if applicable"
+      - name: tsvalcd
+        description: "Categorical value code, if applicable"
+      - name: tsvcdref
+        description: "Reference value code"
+      - name: tsvcdver
+        description: "Reference value version"
+      - name: tsval
+        description: "Value of the parameter"
+      - name: epoch
+        description: "Epoch associated with the record"
+      - name: tsval1
+        description: "First value of the parameter, if applicable"
+      - name: tsval2
+        description: "Second value of the parameter, if applicable"
+      - name: tsval3
+        description: "Third value of the parameter, if applicable"
+      - name: tsval4
+        description: "Fourth value of the parameter, if applicable"
