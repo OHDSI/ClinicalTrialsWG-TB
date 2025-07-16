@@ -1,0 +1,41 @@
+models:
+  - name: cohort
+    description: The subject of a cohort can have multiple, discrete records in the cohort table per
+      cohort_definition_id, subject_id, and non-overlapping time periods. The definition of the 
+      cohort is contained within the COHORT_DEFINITION table. It is listed as part of the RESULTS 
+      schema because it is a table that users of the database as well as tools such as ATLAS need to
+      be able to write to. The CDM and Vocabulary tables are all read-only so it is suggested that 
+      the COHORT and COHORT_DEFINTION tables are kept in a separate schema to alleviate confusion.
+    columns:
+      - name: cohort_definition_id
+        description: ''
+        data_type: integer
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_type_variants(['bigint', 'integer']) }}"
+      - name: subject_id
+        description: ''
+        data_type: integer
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_type_variants(['bigint', 'integer']) }}"
+      - name: cohort_start_date
+        description: ''
+        data_type: date
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_equivalent_types('date') }}"
+      - name: cohort_end_date
+        description: ''
+        data_type: date
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_equivalent_types('date') }}"

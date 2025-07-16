@@ -1,0 +1,30 @@
+models:
+  - name: stg_sdtm__se
+    description: "SE"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique Subject Identifier"
+      - name: seseq
+        description: "Sequence number within the domain"
+      - name: epoch
+        description: "Epoch associated with the subject element"
+      - name: seendtc
+        description: "End date and time of the subject element"
+      - name: sestdy
+        description: "Start study day of the subject element"
+      - name: seendy
+        description: "End study day of the subject element"
+      - name: element
+        description: "Name of Element"
+      - name: etcd
+        description: "Element code"
+      - name: taetord
+        description: "Element order in the arm"
+      - name: seupdes
+        description: "Description of unplanned event"

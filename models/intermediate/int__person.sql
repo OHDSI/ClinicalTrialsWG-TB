@@ -22,6 +22,7 @@ SELECT
     , dm.sex AS gender_source_value
     , dm.race AS race_source_value
     , dm.ethnic AS ethnicity_source_value
+    , dm.armcd
 FROM {{ ref('stg_sdtm__dm') }} AS dm
 LEFT JOIN {{ ref('int__location') }} AS loc
     ON dm.country = loc.location_source_value
