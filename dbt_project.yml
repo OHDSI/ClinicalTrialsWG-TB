@@ -38,7 +38,7 @@ models:
         +materialized: view
         +docs:
           node_color: '#336B91'
-      sctm:
+      stcm:
         +materialized: view
         +docs:
           node_color: '#336B91'

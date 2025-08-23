@@ -4,7 +4,10 @@ WITH cte_ti_ts AS (
         , 0 AS metadata_concept_id
         , 0 AS metadata_type_concept_id
         , tsparm AS {{ adapter.quote("name") }}
-        , tsval AS value_as_string
+        , CASE
+            WHEN tsgrpid IS NULL THEN tsval
+            ELSE {{ dbt.concat(["tsgrpid", "' - '", "tsval"]) }}
+        END AS value_as_string
         , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS value_as_concept_id
         , {{ dbt.cast("NULL", api.Column.translate_type("date")) }} AS metadata_date
         , {{ dbt.cast("NULL", api.Column.translate_type("timestamp")) }} AS metadata_datetime

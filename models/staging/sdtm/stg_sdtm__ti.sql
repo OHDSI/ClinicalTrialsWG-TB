@@ -18,3 +18,4 @@ WITH cte_ti_lower AS (
 
 SELECT *
 FROM cte_ti_rename
+WHERE studyid = 'TB-1015'
