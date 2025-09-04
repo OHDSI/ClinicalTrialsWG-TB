@@ -1,0 +1,72 @@
+models:
+  - name: stg_sdtm__mh
+    description: "MH"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: usubjid
+        description: "Unique subject identifier" 
+      - name: mhseq
+        description: "Sequence number"
+      - name: mhgrpid
+        description: "Group identifier"
+      - name: mhspid
+        description: "Sponsor-defined identifier"
+      - name: mhterm
+        description: "Term"
+      - name: mhmodify
+        description: "Modification of term"
+      - name: mhllt
+        description: "Low level term"
+      - name: mhdecod
+        description: "Decoded term"
+      - name: mhhlt
+        description: "High level term"
+      - name: mhhlgt
+        description: "High level group term"
+      - name: mhcat
+        description: "Category"
+      - name: mhscat
+        description: "Subcategory"
+      - name: mhpresp
+      - name: mhoccur
+      - name: mhstat
+        description: "Status"
+      - name: mhreasnd
+      - name: mhbodsys
+        description: "Body system"
+      - name: mhsoc
+      - name: mhcontrt
+        description: "Concomitant or additional therapy"
+      - name: mhtoxgr
+        description: "Toxicity grade"
+      - name: visitnum
+        description: "Visit number"
+      - name: visit
+        description: "Visit"
+      - name: epoch
+        description: "Epoch"
+      - name: mhdy
+        description: "Study day"
+      - name: mhstdy
+        description: "Study day of event start"
+      - name: mhendy
+        description: "Study day of event end"
+      - name: mhevintx
+      - name: mhstrtp
+        description: "Start time point"
+      - name: mhsttp
+        description: "Start time point"
+      - name: mhenrtpt
+        description: "End relative to time point"
+      - name: mhentpt
+        description: "Relative time point"
+      - name: ststudmo
+      - name: enstudmo
+      - name: ststudyr
+      - name: enstudyr
+      - name: cataract

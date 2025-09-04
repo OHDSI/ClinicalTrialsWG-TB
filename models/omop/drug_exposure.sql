@@ -7,7 +7,7 @@ SELECT
     , drug_exposure_end_date
     , {{ dbt.cast("NULL", api.Column.translate_type("timestamp")) }} AS drug_exposure_end_datetime
     , {{ dbt.cast("NULL", api.Column.translate_type("date")) }} AS verbatim_end_date
-    , drug_type_concept_id
+    , 32809 AS drug_type_concept_id  -- 'Case Report Form'
     , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS stop_reason
     , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS refills
     -- TODO add quantity calculation based on cmdose, cmdoseu, cmdosfrq, cmstdy, cmendy
