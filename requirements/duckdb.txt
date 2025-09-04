@@ -145,8 +145,9 @@ pluggy==1.5.0
     #   pytest
 pre-commit==3.8.0
     # via -r requirements/common.in
-protobuf==4.25.5
+protobuf==4.25.8
     # via
+    #   -r requirements/common.in
     #   dbt-adapters
     #   dbt-common
     #   dbt-core
@@ -182,8 +183,9 @@ referencing==0.35.1
     #   jsonschema-specifications
 regex==2024.9.11
     # via sqlfluff
-requests==2.32.3
+requests==2.32.5
     # via
+    #   -r requirements/common.in
     #   dbt-common
     #   dbt-core
     #   minimal-snowplow-tracker
