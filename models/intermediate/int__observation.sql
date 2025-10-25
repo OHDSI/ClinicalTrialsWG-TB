@@ -6,6 +6,10 @@ WITH raw_events AS (
         , stcm.target_concept_id AS observation_concept_id
         , ae.aeterm AS observation_source_value
         , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS value_as_concept_id
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS value_as_string
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS value_source_value
+        , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS qualifier_concept_id
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS qualifier_source_value
     FROM {{ ref('stg_sdtm__ae') }} AS ae
     LEFT JOIN {{ ref('stg_stcm__source_to_concept_map')}} AS stcm
         ON
@@ -22,6 +26,10 @@ WITH raw_events AS (
         , 1340204 AS observation_concept_id -- History of event
         , mh.mhterm AS observation_source_value
         , stcm.target_concept_id AS value_as_concept_id
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS value_as_string
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS value_source_value
+        , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS qualifier_concept_id
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS qualifier_source_value
     FROM {{ ref('stg_sdtm__mh') }} AS mh
     LEFT JOIN {{ ref('stg_stcm__source_to_concept_map')}} AS stcm
         ON
@@ -36,8 +44,33 @@ WITH raw_events AS (
         , visitnum
         , observation_concept_id
         , observation_source_value
+        , value_as_concept_id
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS value_as_string
+        , value_source_value
+        , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS qualifier_concept_id
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS qualifier_source_value
+    FROM {{ ref('int__disposition')}}
+
+    UNION ALL
+
+    SELECT
+        dm.usubjid
+        , ds.dsstdy AS event_stdy
+        , ds.visitnum
+        , 618771 AS observation_concept_id -- Clinical trial arm
+        , {{ dbt.cast("NULL", api.Column.translate_type("string")) }} AS observation_source_value
         , {{ dbt.cast("NULL", api.Column.translate_type("integer")) }} AS value_as_concept_id
-    FROM {{ ref('int__trial_enrollment_outcome')}}
+        , {{ dbt.concat(["dm.armcd", "' | '", "dm.arm"]) }} AS value_as_string
+        , {{ dbt.concat(["dm.armcd", "' | '", "dm.arm"]) }} AS value_source_value
+        , 4161676 AS qualifier_concept_id -- Planned
+        , 'Planned' AS qualifier_source_value
+    FROM {{ ref('stg_sdtm__dm') }} AS dm
+    LEFT JOIN {{ ref('stg_sdtm__ds') }} AS ds
+        ON
+            dm.usubjid = ds.usubjid
+            AND ds.dscat = 'PROTOCOL MILESTONE'
+            AND ds.dsdecod = 'RANDOMIZED'
+            AND ds.dsterm = 'RANDOMIZED'
 )
 
 SELECT
@@ -47,6 +80,10 @@ SELECT
     , raw_events.observation_source_value
     , raw_events.observation_concept_id
     , raw_events.value_as_concept_id
+    , raw_events.value_as_string
+    , raw_events.qualifier_concept_id
+    , raw_events.qualifier_source_value
+    , raw_events.value_source_value
     , vo.visit_occurrence_id
 FROM raw_events
 LEFT JOIN {{ ref('int__person') }} AS per

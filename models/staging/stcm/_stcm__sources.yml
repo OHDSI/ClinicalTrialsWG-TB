@@ -4,4 +4,4 @@ sources:
     tables:
       - name: source_to_concept_map
       - name: drug_route
-      - name: trial_enrollment_outcome
+      - name: disposition

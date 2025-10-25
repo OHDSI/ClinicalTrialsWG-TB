@@ -1,5 +1,5 @@
 {% set column_names = 
-    dbt_utils.get_filtered_columns_in_relation( source('sctm', 'trial_enrollment_outcome') ) 
+    dbt_utils.get_filtered_columns_in_relation( source('sctm', 'disposition') ) 
 %}
 
 
@@ -7,7 +7,7 @@ WITH cte_te_lower AS (
 
     SELECT
         {{ lowercase_columns(column_names) }}
-    FROM {{ source('sctm','trial_enrollment_outcome') }}
+    FROM {{ source('sctm','disposition') }}
 )
 
 , cte_te_rename AS (
