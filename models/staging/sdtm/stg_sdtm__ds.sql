@@ -62,3 +62,4 @@ WITH cte_ds_lower AS (
 
 SELECT *
 FROM cte_ds_rename
+WHERE studyid = 'TB-1015'

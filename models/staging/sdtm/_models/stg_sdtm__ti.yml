@@ -1,0 +1,16 @@
+models:
+  - name: stg_sdtm__ti
+    description: "TI"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: tirl
+      - name: tivers
+      - name: iecat
+      - name: iescat
+      - name: ietest
+      - name: ietestcd

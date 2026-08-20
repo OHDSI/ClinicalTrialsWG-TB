@@ -1,0 +1,85 @@
+models:
+  - name: cohort_definition
+    description: The COHORT_DEFINITION table contains records defining a Cohort derived from the 
+      data through the associated description and syntax and upon instantiation (execution of the 
+      algorithm) placed into the COHORT table. Cohorts are a set of subjects that satisfy a given 
+      combination of inclusion criteria for a duration of time. The COHORT_DEFINITION table provides
+      a standardized structure for maintaining the rules governing the inclusion of a subject into a
+      cohort, and can store operational programming code to instantiate the cohort within the OMOP 
+      Common Data Model.
+    columns:
+      - name: cohort_definition_id
+        description: This is the identifier given to the cohort, usually by the ATLAS application
+        data_type: integer
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_type_variants(['bigint', 'integer']) }}"
+      - name: cohort_definition_name
+        description: A short description of the cohort
+        data_type: varchar(255)
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_equivalent_types('varchar') }}"
+          - dbt_expectations.expect_column_value_lengths_to_be_between:
+              max_value: 255
+              row_condition: cohort_definition_name is not null
+              strictly: false
+      - name: cohort_definition_description
+        description: A complete description of the cohort.
+        data_type: varchar(MAX)
+        tests:
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_equivalent_types('varchar') }}"
+      - name: definition_type_concept_id
+        description: Type defining what kind of Cohort Definition the record represents and how the 
+          syntax may be executed.
+        data_type: integer
+        tests:
+          - not_null
+          - relationships:
+              to: ref('concept')
+              field: concept_id
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_type_variants(['bigint', 'integer']) }}"
+          - dbt_utils.relationships_where:
+              to: ref('concept')
+              field: concept_id
+              from_condition: definition_type_concept_id != 0
+              to_condition: standard_concept = 'S' AND invalid_reason IS NULL
+      - name: cohort_definition_syntax
+        description: Syntax or code to operationalize the Cohort Definition.
+        data_type: varchar(MAX)
+        tests:
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_equivalent_types('varchar') }}"
+      - name: subject_concept_id
+        description: This field contains a Concept that represents the domain of the subjects that 
+          are members of the cohort (e.g., Person, Provider, Visit).
+        data_type: integer
+        tests:
+          - not_null
+          - relationships:
+              to: ref('concept')
+              field: concept_id
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_type_variants(['bigint', 'integer']) }}"
+          - dbt_utils.relationships_where:
+              to: ref('concept')
+              field: concept_id
+              from_condition: subject_concept_id != 0
+              to_condition: standard_concept = 'S' AND invalid_reason IS NULL
+      - name: cohort_initiation_date
+        description: A date to indicate when the Cohort was initiated in the COHORT table.
+        data_type: date
+        tests:
+          - dbt_expectations.expect_column_to_exist
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list: "{{ get_equivalent_types('date') }}"

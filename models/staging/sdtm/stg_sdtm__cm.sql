@@ -105,3 +105,4 @@ WITH cte_cm_lower AS (
 
 SELECT *
 FROM cte_cm_rename
+WHERE studyid = 'TB-1015'

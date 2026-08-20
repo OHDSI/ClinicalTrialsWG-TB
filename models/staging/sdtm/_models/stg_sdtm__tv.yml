@@ -1,0 +1,24 @@
+models:
+  - name: stg_sdtm__tv
+    description: "TV"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: armcd
+        description: "Arm code"
+      - name: arm
+        description: "Arm name"
+      - name: tvstrl
+        description: "Rule describing when the Visit starts, in relation to the sequence of Elements."
+      - name: tvenrl
+        description: "Rule describing when the Visit ends, in relation to the sequence of Elements."
+      - name: visitnum
+        description: "Visit number"
+      - name: visit
+        description: "Visit name"
+      - name: visitdy
+        description: "Visit day in the study"

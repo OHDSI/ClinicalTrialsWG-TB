@@ -1,0 +1,26 @@
+models:
+  - name: stg_sdtm__ta
+    description: "TA"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: armcd
+        description: "Arm code"
+      - name: arm
+        description: "Arm name"
+      - name: epoch
+        description: "Epoch associated with the arm"
+      - name: tabranch
+        description: "Treatment arm branch"
+      - name: element
+        description: "Element of the arm"
+      - name: etcd
+        description: "Element code"
+      - name: taetord
+        description: "Element order in the arm"
+      - name: tatrans
+        description: "Transition status of the arm"

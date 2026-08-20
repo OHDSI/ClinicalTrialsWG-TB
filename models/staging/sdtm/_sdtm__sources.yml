@@ -8,3 +8,9 @@ sources:
       - name: ds
       - name: sv
       - name: cm
+      - name: ts
+      - name: ti
+      - name: te
+      - name: ta
+      - name: se
+      - name: tv

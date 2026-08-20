@@ -1,0 +1,20 @@
+models:
+  - name: stg_sdtm__te
+    description: "TE"
+    columns:
+      - name: id
+        description: "Unique identifier for the record"
+      - name: studyid
+        description: "Study identifier"
+      - name: domain
+        description: "Domain abbreviation"
+      - name: testrl
+        description: "Rule for when the Element begins"
+      - name: teenrl
+        description: "Rule for when the Element is planned to end"
+      - name: tedur
+        description: "Duration of the Element"
+      - name: element
+        description: "Name of Element"
+      - name: etcd
+        description: "Element code"

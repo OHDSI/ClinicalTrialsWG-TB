@@ -19,7 +19,7 @@ LEFT JOIN {{ ref('int__person') }} AS per
     ON cm.usubjid = per.person_source_value
 LEFT JOIN {{ ref('int__visit_occurrence') }} AS vo
     ON
-        cm.visitnum = vo.visit_source_value
+        cm.visitnum = vo.visitnum
         AND per.person_id = vo.person_id
 LEFT JOIN {{ ref('stg_stcm__source_to_concept_map')}} AS stcm
     ON

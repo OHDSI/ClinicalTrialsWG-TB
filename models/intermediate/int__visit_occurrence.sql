@@ -5,7 +5,8 @@ SELECT
     , {{ dateadd(datepart="day", interval="sv.svstdy", from_date_or_timestamp="'2014-10-23'") }} AS visit_start_date
     , {{ dateadd(datepart="day", interval="sv.svendy", from_date_or_timestamp="'2014-10-23'") }} AS visit_end_date
     , 32809 AS visit_type_concept_id -- 'Case Report Form'
-    , sv.visitnum AS visit_source_value
+    , {{ dbt.concat(["sv.visitnum", "' | '", "sv.visit"]) }} AS visit_source_value
+    , sv.visitnum
 FROM {{ ref('stg_sdtm__sv') }} AS sv
 LEFT JOIN {{ ref('int__person') }} AS per
     ON sv.usubjid = per.person_source_value
