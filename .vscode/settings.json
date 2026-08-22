@@ -26,4 +26,5 @@
         ]
     },
     "dbt.enableNewLineagePanel": true,
+    "dbt.perspectiveTheme": "Vintage",
 }

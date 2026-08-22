@@ -25,3 +25,11 @@ models:
         description: "The route text value"
       - name: concept_id
         description: "The OMOP concept ID corresponding to the route"
+  
+  - name: stg_stcm__disposition
+    description: Concept mapping for SDTM trial enrollment and outcome statuses
+    columns:
+      - name: status
+        description: "The concatenated enrollment or outcome status text value (i.e. DSCAT - DSDECOD)"
+      - name: concept_id
+        description: "The OMOP concept ID corresponding to the enrollment or outcome status"

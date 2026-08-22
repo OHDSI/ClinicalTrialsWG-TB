@@ -1,0 +1,166 @@
+models:
+  - name: stg_sdtm__ae
+    description: "AE"
+    columns:
+    - name: id
+      description: "Unique identifier for the record"
+    - name: studyid
+      description: "Study identifier"
+    - name: domain
+      description: "Domain abbreviation"
+    - name: usubjid
+      description: "Unique subject identifier"
+    - name: aeseq
+      description: "Sequence number"
+    - name: aer
+    - name: aespid
+      description: "Sponsor-defined identifier"
+    - name: aelnkid
+      description: "Link identifier"
+    - name: aeterm
+      description: "Term"
+    - name: aemodify
+      description: "Modification of term"
+    - name: aellt
+      description: "Low level term"
+    - name: aedecod
+      description: "Decoded term"
+    - name: aehlt
+      description: "High level term"
+    - name: aecat
+      description: "Category"
+    - name: aescat
+      description: "Subcategory"
+    - name: aebodsys
+      description: "Body system"
+    - name: aesosc
+    - name: aesev
+      description: "Severity"
+    - name: aeser
+      description: "Seriousness"
+    - name: aeacnoth
+      description: "Other action taken (not study medication related)"
+    - name: aerrel
+      description: "Relationship to adverse event"
+    - name: aerelnst
+    - name: aepatt
+      description: "Pattern of event"
+    - name: aeout
+      description: "Outcome"
+    - name: aescong
+      description: "Congenital anomaly"
+    - name: aesdisab
+      description: "Disability"
+    - name: aesdth
+      description: "Death"
+    - name: aeshosp
+      description: "Hospitalization"
+    - name: aeslife
+      description: "Life-threatening"
+    - name: aesod
+    - name: aesmie
+    - name: aecontrt
+      description: "Concomitant or Additional Therapy Given"
+    - name: aetoxgr
+      description: "Toxicity Grade"
+    - name: visitnum
+      description: "Visit number"
+    - name: visit
+      description: "Visit name"
+    - name: epoch
+      description: "Epoch associated with the adverse event"
+    - name: aedy
+      description: "Adverse event day"
+    - name: aestdy
+      description: "Adverse event start day"
+    - name: aeendy
+      description: "Adverse event end day"
+    - name: aedur
+      description: "Adverse event duration"
+    - name: aeenrf
+    - name: aeenrtpt
+      description: "End Relative to Reference Time Point"
+    - name: aeentpt
+      description: "Reference Time Point"
+    - name: ststudmo
+    - name: enstudmo
+    - name: ststudyr
+    - name: enstudyr
+    - name: aecn
+      description: "Action Taken with Study Treatment"
+    - name: aecnbpa
+    - name: acncomm
+    - name: aecnlzd
+    - name: autopsy
+    - name: caus1
+    - name: caus1hlt
+    - name: caus1llt
+    - name: caus1pt
+    - name: caus1soc
+    - name: caus1sp
+    - name: caus2
+    - name: caus2hlt
+    - name: caus2llt
+    - name: caus2pt
+    - name: caus2soc
+    - name: caus2sp
+    - name: caus3
+    - name: caus3sp
+    - name: caus4
+    - name: caus4hlt
+    - name: caus4llt
+    - name: caus4pt
+    - name: caus4soc
+    - name: caus4sp
+    - name: caus5
+    - name: caus5hlt
+    - name: caus5llt
+    - name: caus5pt
+    - name: caus5soc
+    - name: caus5sp
+    - name: caus6
+    - name: caus6hlt
+    - name: caus6llt
+    - name: caus6pt
+    - name: caus6soc
+    - name: caus6sp
+    - name: aechange
+    - name: cmsusae1
+    - name: concoma
+    - name: conmed1
+    - name: conmed2
+    - name: conmed3
+    - name: conmed4
+    - name: conmed5
+    - name: conmed6
+    - name: aediscdy
+    - name: drugae
+    - name: ethusae
+    - name: aexdy
+    - name: hepatfl
+    - name: isosusae
+    - name: aelbrslt
+    - name: otherhlt
+    - name: otherllt
+    - name: otherpt
+    - name: othersae
+    - name: othersoc
+    - name: period
+    - name: aeprior
+    - name: aeprod
+    - name: pzasusae
+    - name: rechalng
+    - name: aereindy
+    - name: aerelbdq
+    - name: aerellzd
+    - name: aereloth
+    - name: aerelpmd
+    - name: reltbmed
+    - name: aereocur
+    - name: rptsusae
+    - name: aeserrpt
+    - name: aesersp
+    - name: trtemerg
+    - name: withdraw
+    - name: withdrdy
+    - name: worsened

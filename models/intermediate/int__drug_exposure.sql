@@ -9,7 +9,6 @@ SELECT
     END AS drug_exposure_end_date
     , cm.cm_concat AS drug_source_value
     , stcm.target_concept_id AS drug_concept_id
-    , 32809 AS drug_type_concept_id  -- 'Case Report Form'
     , cm.cmendy - cm.cmstdy + 1 AS days_supply
     , dr.concept_id AS route_concept_id
     , cm.cmroute AS route_source_value
